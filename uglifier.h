@@ -29,6 +29,7 @@ inline std::string getRandomBarCode() {
 static const std::string_view keywords[] = { "int","char","class","const","static","constexpr" };
 class uglifier {
 public:
+	uglifier(std::string a):m_code(a){};
 	uglifier() = default;
 	void uglify();
 private:
@@ -42,4 +43,6 @@ private:
 	std::string m_badCode = "";
 	void m_addFiveSpaces();
 	void addUserDefThing(std::string_view);
+	bool isDefined(std::string_view);
+	std::string getBarCodeFor(std::string_view);
 };

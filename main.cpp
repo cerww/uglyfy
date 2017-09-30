@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include "fileStuff.h"
+#include "uglifier.h"
 
 int main() {
 	//auto fStuff = cw::getFileConts("");
@@ -11,6 +12,9 @@ int main() {
 	  then remove comments
 	*/
 	std::string newString = "";
-
+	uglifier(cw::getFileConts("uglifier.cpp")).uglify();
+	//newString.replace(1,);
+	int qwaedas = 0;
+	std::cin >> qwaedas;
 	return 0;
 }
